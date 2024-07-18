@@ -1,0 +1,296 @@
+@import url(../fonts/RedHatText-VariableFont_wght.ttf);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: black;
+    --primary-color2: #E64A19;
+}
+
+.color-red {
+    color: var(--primary-color2);
+}
+
+body {
+    font-family: "Red Hat Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+    background-color: #fdf6f3 !important;
+    width: 100% !important;
+}
+
+
+.main .item-title {
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding-bottom: 13px;
+}
+
+.main .item-card {
+    cursor: pointer;
+}
+
+.main .item-image {
+    width: 100%;
+    /* height: 100%; */
+    position: relative;
+}
+
+.main .item-image img.item-img {
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+}
+
+
+
+.main .item-image .add-to-cart-btn {
+    position: absolute;
+    text-align: center;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 35px;
+    border: 1px solid white;
+    box-shadow: 1px 1px 0px;
+    border-radius: 15px;
+    padding: 3px;
+    z-index: 99;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.5s;
+    background-color: white;
+    word-spacing: -0rem;
+    -webkit-box-shadow: -1px -1px 5px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px -1px 5px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px -1px 5px -1px rgba(0, 0, 0, 0.75);
+}
+
+.main .item-image .add-to-cart-btn:hover {
+    background-color: #E64A19;
+    color: white;
+}
+
+.add-to-cart-btn .cart-icon {
+    filter: none;
+    transition: filter 0.3s ease;
+
+}
+
+.main .item-image div:hover .cart-icon {
+    filter: brightness(0) invert(1);
+}
+
+
+
+.main .item-details span {
+    display: block;
+    line-height: 21px;
+}
+
+.main .item-details span:nth-child(1) {
+    font-size: 13px;
+    color: gray;
+    font-style: normal;
+}
+
+.main .item-details span:nth-child(2) {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.main .item-details span:nth-child(3) {
+    color: var(--primary-color2);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.main .cart-box {
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.main .cart-box h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-color2);
+
+}
+
+.main .cart-box .item h6 {
+    font-size: 17px !important;
+}
+
+.main .cart-box .item {
+    position: relative;
+    line-height: 13px;
+}
+
+.main .cart-box .item .cart-item-details {
+    display: flex;
+}
+
+.main .cart-box .item .cart-item-details span {
+    display: block;
+    font-weight: 500;
+}
+
+.main .cart-box .item .cart-item-count {
+    color: var(--primary-color2);
+}
+
+
+.main .cart-box .item h6 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.main .cart-box .item button {
+    position: absolute;
+    top: 20px;
+    transform: translateY(-40%);
+    right: 10px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* This ensures the icon doesn't overflow the button */
+}
+
+
+
+.main .cart-box .item button span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.main .cart-box .item button span i {
+    font-size: 14px;
+    display: block;
+    line-height: 1;
+}
+
+.main .cart-box .items-total {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+
+.main .cart-box .items-total h4 {
+    color: #000 !important;
+}
+
+.main .cart-box .order .delivery {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: whitesmoke;
+    border-radius: 1px;
+    text-align: center;
+    padding: 15px 0px;
+}
+
+
+.main .cart-box .order .delivery p {
+    margin: 0;
+    text-align: center;
+    font-weight: normal;
+    font-weight: 400;
+}
+
+.main .cart-box .order button {
+    background-color: #E64A19;
+    border: none;
+    color: white;
+    height: 42px;
+    border-radius: 30px;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 17px;
+
+    /* margin: 10px 20px; */
+}
+
+.main .cart-box .order button:hover {
+    opacity: 0.6;
+}
+
+/* Model */
+
+
+.modal-content .conform-tick {
+    line-height: 15px;
+    padding-bottom: 30px;
+}
+
+.modal-content .conform-tick h3 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 !important;
+}
+
+.modal-content .conform-tick span {
+    font-size: 14px;
+    color: gray;
+    padding-top: 0px;
+}
+
+.modal-content .modal-body {
+    background-color: #fdf6f3;
+}
+
+.modal-content .modal-body .order-items .order-item {}
+
+.modal-footer {
+    display: flex;
+    align-items: center;
+}
+
+
+.modal-content .modal-body .order-total p {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+.modal-content .modal-body .order-total h6 {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.modal-footer {
+    margin: 0;
+    border: none !important;
+}
+
+.modal-footer button {
+    height: 42px;
+    width: 100%;
+    border: none;
+    background-color: #E64A19;
+    border-radius: 50px;
+    color: white;
+    margin: 5px 25px;
+
+}
